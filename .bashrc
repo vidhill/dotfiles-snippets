@@ -22,6 +22,6 @@ source ~/.bash_prompt
 
 # Better version of ctrl - r history search
 # mac: brew install hh
-# ubuntu: sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hh && hh --show-configuration >> ~/.bashrc
-
+# ubuntu: sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hh
+# then, all platforms: hh --show-configuration >> ~/.bashrc
 
