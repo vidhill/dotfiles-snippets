@@ -13,12 +13,13 @@ source <(kubectl completion bash) # setup autocomplete in bash
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.bash_alias ]; then
+    . ~/.bash_alias
 fi
 
-
-source ~/.bash_prompt
+if [ -f ~/.bash_prompt ]; then
+   . ~/.bash_prompt
+fi
 
 # Better version of ctrl - r history search
 # mac: brew install hh
