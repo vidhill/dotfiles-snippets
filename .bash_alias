@@ -4,6 +4,7 @@ alias pbpaste='xclip -selection clipboard -o'
 
 
 alias c="clear"
+alias ll="ls -l"
 
 # git shortcuts
 alias gs="git status"
