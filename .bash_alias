@@ -9,5 +9,5 @@ alias ll="ls -l"
 # git shortcuts
 alias gs="git status"
 alias ga="git add"
-alias gcm="git commit -m"
+alias gcm="git commit -S -m"
 alias gp="git push"
