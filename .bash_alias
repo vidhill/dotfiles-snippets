@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # mac style copy and paste
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'

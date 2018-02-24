@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # custom mkdir and cd into it
-mkdircd ()
+mkd ()
 {
     mkdir -p -- "$1" &&
       cd -P -- "$1"
