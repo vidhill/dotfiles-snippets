@@ -1,8 +1,7 @@
 # dotfiles-snippets
 Just a space to store my Dotfiles and some snippets
 
-##
-Cheatsheets
+## Cheatsheets
 
 * [Docker](notes-cheatsheets/docker.md)
 * [Git](notes-cheatsheets/git.md)
