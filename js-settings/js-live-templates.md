@@ -5,6 +5,14 @@ describe('$END$', function(){
 }); 
 ```
 
+it
+```javascript
+it('should $END$', function(){
+    
+}); 
+```
+
+
 after
 ```javascript
 after(function(){
