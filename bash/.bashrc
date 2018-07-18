@@ -23,7 +23,7 @@ if [ -f ~/.bash_prompt ]; then
    . ~/.bash_prompt
 fi
 
-# Better version of ctrl - r history search
+# Better version of ctrl - r history search https://github.com/dvorka/hstr
 # mac: brew install hh
 # ubuntu: sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hh
 # then, all platforms: hh --show-configuration >> ~/.bashrc
