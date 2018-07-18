@@ -6,4 +6,4 @@ Just a space to store my Dotfiles and some snippets
 * [Docker](notes-cheatsheets/docker.md)
 * [Git](notes-cheatsheets/git.md)
 * [Networking](notes-cheatsheets/networking.md)
-* [Command line](notes-cheatsheets/command_line.m)
+* [Command line](notes-cheatsheets/command_line.md)
