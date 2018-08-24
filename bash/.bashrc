@@ -9,6 +9,7 @@ mkd ()
 
 # add autocomplete for kubectl
 source <(kubectl completion bash) # setup autocomplete in bash
+source ~/kube-prompt.sh
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
