@@ -30,7 +30,17 @@ docker stop $(docker ps -f ancestor=register --format "{{.ID}}")
 
 ```
 
+Add Autocoplete for Docker
+```
+# mac 
+brew install bash-completion
 
+# run
+cd /usr/local/etc/bash_completion.d
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
+```
 
 
 
