@@ -26,5 +26,6 @@ kubectl expose deployment http --port=80 --type=NodePort
 ```
 
 ```bash
-
+kubectl apply -f spec.yaml
+# apply ammended spec file, updates resource..
 ```
