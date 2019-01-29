@@ -8,6 +8,11 @@ kubectl get pods -n kube-system
 ```bash
 kubectl get pods -l  branch=feature-kafka
 # -l label - pods that match label
+
+# analogous
+kubectl get pods -l="name=bad-frontend"
+kubectl get pods --selector="name=bad-frontend"
+
 ```
 
 ```bash
