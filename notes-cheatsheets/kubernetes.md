@@ -34,3 +34,9 @@ kubectl expose deployment http --port=80 --type=NodePort
 kubectl apply -f spec.yaml
 # apply ammended spec file, updates resource..
 ```
+
+
+```bash
+# update image on deployment
+kubectl set image deployment/http http=docker.io/katacoda/docker-http-server:latest
+```
