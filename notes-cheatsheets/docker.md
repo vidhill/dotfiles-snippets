@@ -22,7 +22,8 @@ docker stop $(docker ps -f ancestor=register --format "{{.ID}}")
 
 
 ```bash
-
+# pass the id to docker rm command
+docker stop 33b53276e458 | xargs docker rm
 
 ```
 
