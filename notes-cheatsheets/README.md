@@ -1,5 +1,3 @@
-## Cheatsheets
-
 * [Docker](notes-cheatsheets/docker.md)
 * [Git](notes-cheatsheets/git.md)
 * [Networking](notes-cheatsheets/networking.md)
