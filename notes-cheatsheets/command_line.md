@@ -35,6 +35,11 @@ grep -r searchTerm .
 grep -r searchTerm folder/sub
 ```
 
+Grep but use `.gitignore` to ignore items
+```bash
+git grep searchTerm *.md
+```
+
 ### Find
 
 ```bash
