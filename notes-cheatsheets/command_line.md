@@ -20,3 +20,35 @@ Curl with response status code
 ``` bash
 curl --write-out "HTTPSTATUS:%{http_code}" http://www.example.com
 ```
+### Grep
+Grep globs
+```bash
+grep searchTerm *.md
+```
+
+Grep recursive, find search term in current folder & subfolders
+```bash
+grep -r searchTerm .
+```
+
+```bash
+grep -r searchTerm folder/sub
+```
+
+### Find
+
+```bash
+find . -name "*.js"
+```
+
+Find but exclude `node_modules` folder
+```bash
+find . -path ./node_modules -prune -false -o -name "*.test.js
+```
+
+### Find and grep within files
+
+```bash
+find . -name "*.spec.js" | xargs grep "describe"
+```
+
