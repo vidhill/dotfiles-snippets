@@ -8,7 +8,7 @@ if ! type aspell > /dev/null; then
 fi
 
 words="$(grep -v '^#' "$1" \
-         | aspell -d en_GB "--personal=$HOME/.config/git/.dict.en.pws" list)"
+         | aspell --camel-case -d en_GB "--personal=$HOME/.config/git/.dict.en.pws" list)"
 if [ -n "$words" ]; then
   cmd="git"
   msg="$1"
