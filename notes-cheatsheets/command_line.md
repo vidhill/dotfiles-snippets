@@ -23,7 +23,7 @@ curl --write-out "HTTPSTATUS:%{http_code}" http://www.example.com
 
 Pipe value to grep, use regex
 ``` bash
-echo "foo.docker.com/foo/bar:v1.1.85" | grep -Eo '\/.+'
+echo "foo.docker.com/foo/bar:v1.1.85" | grep -E '\/.+'
 # echos /foo/bar:v1.1.85
 ```
 
