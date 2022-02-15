@@ -15,11 +15,14 @@ Make Directory, with subfolders
 mkdir -p foo/bar/baz
 ```
 
+## curl
 
 Curl with response status code
 ``` bash
 curl --write-out "HTTPSTATUS:%{http_code}" http://www.example.com
 ```
+
+## grep
 
 Pipe value to grep, use regex
 ``` bash
