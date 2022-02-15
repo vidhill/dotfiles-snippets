@@ -20,3 +20,10 @@ Curl with response status code
 ``` bash
 curl --write-out "HTTPSTATUS:%{http_code}" http://www.example.com
 ```
+
+Pipe value to grep, use regex
+``` bash
+echo "foo.docker.com/foo/bar:v1.1.85" | grep -Eo '\/.+'
+# echos /foo/bar:v1.1.85
+```
+
