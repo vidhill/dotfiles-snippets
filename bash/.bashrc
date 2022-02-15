@@ -29,3 +29,7 @@ fi
 # ubuntu: sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hh
 # then, all platforms: hh --show-configuration >> ~/.bashrc
 
+# Autocomplete makefile targets
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
+
+
