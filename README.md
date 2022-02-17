@@ -9,3 +9,7 @@ Just a space to store my Dotfiles and some snippets
 - [Networking](notes-cheatsheets/networking.md)
 - [Command line](notes-cheatsheets/command_line.md)
 - [Kubernetes - kubectl](notes-cheatsheets/kubernetes.md)
+
+#### Use prettier to prettify all markdown files
+
+`npx prettier -w .`
