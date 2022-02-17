@@ -19,15 +19,15 @@ git branch -m new-name
 ```
 
 ### Rename branch remote
+
 _Delete the old-name remote branch and push the new-name local branch._
 
 ```
 git push origin :old-name new-name
 ```
+
 ### Remove file from staged commit without deleting local file
 
 ```
 git rm --cached unwanted_file.txt
 ```
-
-
