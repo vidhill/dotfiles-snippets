@@ -10,6 +10,8 @@ Moving cursor around
 
 ## Various
 
+- [yq](command-line/yq.md)
+
 Make Directory, with subfolders
 
 ```bash
