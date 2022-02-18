@@ -29,9 +29,9 @@ curl --write-out "HTTPSTATUS:%{http_code}" http://www.example.com
 
 ## grep
 
-Pipe value to grep, use regex
+Pipe value to grep, use regex to pick substring matching regex pattern
 
 ```bash
-echo "foo.docker.com/foo/bar:v1.1.85" | grep -E '\/.+'
-# echos /foo/bar:v1.1.85
+echo "foo.docker.com/foo/bar:v1.1.85" | grep -oE '\/.+'
+# echo-s /foo/bar:v1.1.85
 ```
