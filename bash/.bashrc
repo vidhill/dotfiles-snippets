@@ -7,6 +7,11 @@ mkd ()
       cd -P -- "$1"
 }
 
+# modified version of answer: https://softwarerecs.stackexchange.com/a/50273
+highlight() { 
+   grep --color -E "$1|$";
+}
+
 # add autocomplete for kubectl
 source <(kubectl completion bash) # setup autocomplete in bash
 source ~/kube-prompt.sh
