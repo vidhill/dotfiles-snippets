@@ -13,3 +13,25 @@ Just a space to store my Dotfiles and some snippets
 #### Use prettier to prettify all markdown files
 
 `npx prettier -w .`
+
+### Set up spell check pre-commit hook
+
+#### Prerequisites
+
+Copy over custom dictionary
+
+```bash
+$ cp git-hooks/.dict.en.pws ~/.config/git/.dict.en.pws
+```
+
+Copy helper script into local `bin` folder
+
+```bash
+chmod +x git-hooks/aspell-add-word.sh; cp git-hooks/aspell-add-word.sh ~/bin/aspell-add-word.sh
+```
+
+#### Copy hook
+
+```bash
+$ chmod +x git-hooks/commit-msg-spell-check.sh; cp git-hooks/commit-msg-spell-check.sh .git/hooks/commit-msg
+```
