@@ -20,6 +20,7 @@ alias l='ls -CF ${colorflag}'
 alias cat=ccat # coloured cat  https://github.com/jingweno/ccat
 
 # git shortcuts
+alias gb="git checkout -b"
 alias gs="git status"
 alias ga="git add"
 alias gcm="git commit -S -m"
