@@ -4,11 +4,13 @@
 
 __kube_ps1()
 {
-    CO="current-context:"
-    # Get current context
-    CONTEXT=$(cat ~/.kube/config | grep ${CO} | sed "s/${CO} //")
+    if [ -f ~/.kube/config ]; then
+        CO="current-context:"
+        # Get current context
+        CONTEXT=$(cat ~/.kube/config | grep ${CO} | sed "s/${CO} //")
 
-    if [ -n "$CONTEXT" ]; then
-        echo "(k8s: ${CONTEXT})"
+        if [ -n "$CONTEXT" ]; then
+            echo "(k8s: ${CONTEXT})"
+        fi
     fi
 }
