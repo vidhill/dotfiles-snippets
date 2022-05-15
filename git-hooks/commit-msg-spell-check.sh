@@ -1,4 +1,4 @@
-i#!/bin/sh
+#!/bin/sh
 
 # slightly modified version from example at https://phrye.com/tools/git-spell-check/ 
 
