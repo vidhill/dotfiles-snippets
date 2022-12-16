@@ -1,14 +1,31 @@
 ### Network
 
+#### ports open by what process running on port
+
+Linux
+
 ```bash
                 # ports open  by what
 netstat -tupln # process running on port
 ```
 
+#### what is running on specific port
+
+Linux
+
 ```bash
 # what is running on specific port
 sudo fuser -v -n tcp 8443
 ```
+
+Mac
+
+```bash
+# what is running on specific port
+netstat -vanp tcp | grep 8080
+```
+
+Linux, PID and command for process on port
 
 ```bash
 # PID and command for process on port
@@ -16,28 +33,35 @@ MYPID=`sudo fuser -n tcp 8443 | awk '{ print $1 }'` && ps -ef | grep $MYPID | gr
 ```
 
 ### Using telnet to check a port is open on a host
+
 Connect to host `neverssl.com` on port `80`
+
 ```bash
 telnet neverssl.com 80
 ```
+
 Attempting to connect to a non open port `2020`
+
 ```bash
 telnet neverssl.com 2020
 ```
- - will just hang
+
+- will just hang
 
 ### Using netcat to check a port is open on a host
+
 Probe host `neverssl.com` on port `80`
+
 ```bash
 nc -zvw3 neverssl.com 80
 ```
+
 Attempting to probe a non open port `2020`
+
 ```bash
 nc -zvw3 neverssl.com 2020
 ```
- - will hang and eventually time out
 
+- will hang and eventually time out
 
 https://github.com/sindresorhus/fkill-cli
-
-

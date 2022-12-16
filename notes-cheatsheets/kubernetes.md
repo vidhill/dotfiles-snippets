@@ -35,8 +35,19 @@ kubectl apply -f spec.yaml
 # apply ammended spec file, updates resource..
 ```
 
-
 ```bash
 # update image on deployment
 kubectl set image deployment/http http=docker.io/katacoda/docker-http-server:latest
+```
+
+### Change namespace for the current context
+
+```bash
+$ kubectl config set-context --current --namespace=kube-system
+```
+
+Print out namespace set for the current context
+
+```bash
+$ kubectl config view --minify | grep namespace:
 ```
