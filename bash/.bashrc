@@ -12,8 +12,12 @@ highlight() {
    grep --color -E "$1|$";
 }
 
-# add autocomplete for kubectl
-source <(kubectl completion bash) # setup autocomplete in bash
+# add autocomplete for kubectl (if it is installed)
+if type kubectl &>/dev/null
+then
+   source <(kubectl completion bash) # setup autocomplete in bash
+fi
+
 source ~/kube-prompt.sh
 
 # Alias definitions.
