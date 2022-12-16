@@ -12,9 +12,25 @@ highlight() {
    grep --color -E "$1|$";
 }
 
-# add autocomplete for kubectl
-source <(kubectl completion bash) # setup autocomplete in bash
+# clone then cd into folder in one command
+gitclone () 
+{
+  git clone "$1" && cd "$(basename "$_" .git)"
+}
+
+
+# add autocomplete for kubectl (if it is installed)
+if type kubectl &>/dev/null
+then
+   source <(kubectl completion bash) # setup autocomplete in bash
+fi
+
 source ~/kube-prompt.sh
+
+if type lima &>/dev/null
+then
+   source <(lima nerdctl completion bash)
+fi
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
