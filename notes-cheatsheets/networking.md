@@ -1,14 +1,31 @@
 ### Network
 
+#### ports open by what process running on port
+
+Linux
+
 ```bash
                 # ports open  by what
 netstat -tupln # process running on port
 ```
 
+#### what is running on specific port
+
+Linux
+
 ```bash
 # what is running on specific port
 sudo fuser -v -n tcp 8443
 ```
+
+Mac
+
+```bash
+# what is running on specific port
+netstat -vanp tcp | grep 8080
+```
+
+Linux, PID and command for process on port
 
 ```bash
 # PID and command for process on port
