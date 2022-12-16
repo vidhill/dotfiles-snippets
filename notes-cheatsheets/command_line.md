@@ -26,12 +26,48 @@ Curl with response status code
 ```bash
 curl --write-out "HTTPSTATUS:%{http_code}" http://www.example.com
 ```
+### Grep
+Grep globs
+```bash
+grep searchTerm *.md
+```
 
-## grep
+Grep recursive, find search term in current folder & subfolders
+```bash
+grep -r searchTerm .
+```
+
+```bash
+grep -r searchTerm folder/sub
+```
+
+Grep but use `.gitignore` to ignore items
+```bash
+git grep searchTerm *.md
+```
 
 Pipe value to grep, use regex to pick substring matching regex pattern
-
 ```bash
 echo "foo.docker.com/foo/bar:v1.1.85" | grep -oE '\/.+'
 # echo-s /foo/bar:v1.1.85
 ```
+
+### Find
+
+```bash
+find . -name "*.js"
+```
+
+Find but exclude `node_modules` folder
+```bash
+find . -path ./node_modules -prune -false -o -name "*.test.js
+```
+
+### Find and grep within files
+
+```bash
+find . -name "*.spec.js" | xargs grep "describe"
+```
+
+
+
