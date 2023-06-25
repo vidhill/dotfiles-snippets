@@ -1,34 +1,29 @@
 #!/bin/bash
 
 # custom mkdir and cd into it
-mkd ()
-{
-    mkdir -p -- "$1" &&
+mkd() {
+   mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
 
 # modified version of answer: https://softwarerecs.stackexchange.com/a/50273
-highlight() { 
-   grep --color -E "$1|$";
+highlight() {
+   grep --color -E "$1|$"
 }
 
 # clone then cd into folder in one command
-gitclone () 
-{
-  git clone "$1" && cd "$(basename "$_" .git)"
+gitclone() {
+   git clone "$1" && cd "$(basename "$_" .git)"
 }
 
-
 # add autocomplete for kubectl (if it is installed)
-if type kubectl &>/dev/null
-then
+if type kubectl &>/dev/null; then
    source <(kubectl completion bash) # setup autocomplete in bash
 fi
 
 source ~/kube-prompt.sh
 
-if type lima &>/dev/null
-then
+if type lima &>/dev/null; then
    source <(lima nerdctl completion bash)
 fi
 
@@ -38,7 +33,7 @@ fi
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_alias ]; then
-    . ~/.bash_alias
+   . ~/.bash_alias
 fi
 
 if [ -f ~/.bash_prompt ]; then
@@ -46,11 +41,9 @@ if [ -f ~/.bash_prompt ]; then
 fi
 
 # Better version of ctrl - r history search https://github.com/dvorka/hstr
-# mac: brew install hh
+# mac: brew install hstr
 # ubuntu: sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hh
 # then, all platforms: hh --show-configuration >> ~/.bashrc
 
 # Autocomplete makefile targets
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
-
-

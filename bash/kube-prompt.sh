@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# credit: https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html 
+# credit: https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html
 
-__kube_ps1()
-{
+__kube_ps1() {
     if [ -f ~/.kube/config ]; then
         CO="current-context:"
         # Get current context
