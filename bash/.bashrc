@@ -21,7 +21,9 @@ if type kubectl &>/dev/null; then
    source <(kubectl completion bash) # setup autocomplete in bash
 fi
 
-source ~/kube-prompt.sh
+if [ -f ~/.kube-propmt ]; then
+   source ~/kube-prompt.sh
+fi
 
 if type lima &>/dev/null; then
    source <(lima nerdctl completion bash)
