@@ -46,7 +46,7 @@ Attempting to connect to a non open port `2020`
 telnet neverssl.com 2020
 ```
 
-- will just hang
+-   will just hang
 
 ### Using netcat to check a port is open on a host
 
@@ -62,6 +62,6 @@ Attempting to probe a non open port `2020`
 nc -zvw3 neverssl.com 2020
 ```
 
-- will hang and eventually time out
+-   will hang and eventually time out
 
 https://github.com/sindresorhus/fkill-cli

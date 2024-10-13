@@ -20,18 +20,16 @@ yq dummy.yaml -o=json
 
 ```yaml
 users:
-- name: defaultuser
-  user:
-    username: kube
-    token: foo
-- name: user
-  user:
-    user: kube
-    token: foobar
-
+    - name: defaultuser
+      user:
+          username: kube
+          token: foo
+    - name: user
+      user:
+          user: kube
+          token: foobar
 ```
 
 ```bash
 $ cat config_example | yq '.users[] | select(.name == "user") | .user.token'
 ```
-
