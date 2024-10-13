@@ -1,10 +1,15 @@
-install-swagger:
+
+default:
+	@printf "Make targets\n\n";
+	@grep '^[^#[:space:]].*:' Makefile
+
+install-aspell:
 	brew update
 	brew install aspell
 
 check-aspell:
    ifeq (, $(shell which aspell))
-		@make install-swagger
+		@make install-aspell
    endif
 
 create-local-bin:
@@ -19,3 +24,9 @@ setup-aspell: check-aspell create-local-bin
 	cp git-hooks/.dict.en.pws ~/.config/git/.dict.en.pws
 	@make install-aspell-helper-script
 	
+lint-bash-scripts:
+	shfmt -l -w bash/*.sh
+
+format-md:
+	npx prettier -w .
+
