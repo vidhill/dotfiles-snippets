@@ -1,0 +1,3 @@
+-   [`yq`](yq.md)
+-   [`jq`](jq.md)
+-   [`shfmt`](shfmt.md)
