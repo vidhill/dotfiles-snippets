@@ -5,8 +5,8 @@
 Linux
 
 ```bash
-                # ports open  by what
-netstat -tupln # process running on port
+$ netstat -tupln # process running on port
+                 # ports open by what
 ```
 
 #### what is running on specific port
@@ -14,22 +14,20 @@ netstat -tupln # process running on port
 Linux
 
 ```bash
-# what is running on specific port
-sudo fuser -v -n tcp 8443
+$ sudo fuser -v -n tcp 8443; # what is running on specific port
 ```
 
 Mac
 
 ```bash
-# what is running on specific port
-netstat -vanp tcp | grep 8080
+$ netstat -vanp tcp | grep 8080 # what is running on specific port
 ```
 
 Linux, PID and command for process on port
 
 ```bash
+$ MYPID=`sudo fuser -n tcp 8443 | awk '{ print $1 }'` && ps -ef | grep $MYPID | grep -v grep
 # PID and command for process on port
-MYPID=`sudo fuser -n tcp 8443 | awk '{ print $1 }'` && ps -ef | grep $MYPID | grep -v grep
 ```
 
 ### Using telnet to check a port is open on a host
@@ -37,13 +35,13 @@ MYPID=`sudo fuser -n tcp 8443 | awk '{ print $1 }'` && ps -ef | grep $MYPID | gr
 Connect to host `neverssl.com` on port `80`
 
 ```bash
-telnet neverssl.com 80
+$ telnet neverssl.com 80
 ```
 
 Attempting to connect to a non open port `2020`
 
 ```bash
-telnet neverssl.com 2020
+$ telnet neverssl.com 2020
 ```
 
 -   will just hang
@@ -53,13 +51,13 @@ telnet neverssl.com 2020
 Probe host `neverssl.com` on port `80`
 
 ```bash
-nc -zvw3 neverssl.com 80
+$ nc -zvw3 neverssl.com 80
 ```
 
 Attempting to probe a non open port `2020`
 
 ```bash
-nc -zvw3 neverssl.com 2020
+$ nc -zvw3 neverssl.com 2020
 ```
 
 -   will hang and eventually time out

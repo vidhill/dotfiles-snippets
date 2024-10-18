@@ -23,6 +23,15 @@ alias cat=ccat # coloured cat  https://github.com/jingweno/ccat
 alias gb="git checkout -b"
 alias gs="git status"
 alias ga="git add"
+alias gap="git add -p"
+
 alias gcm="git commit -S -m"
 alias gp="git push"
 alias gca="git commit --amend"
+
+# delete remote branch
+alias gbrd="git push --no-verify origin -d"
+alias gpod="git push --no-verify origin -d"
+
+# select/fuzzy find branch to switch to
+alias gbs="git branch | fzf | xargs git checkout"

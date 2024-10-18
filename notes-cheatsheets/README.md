@@ -2,4 +2,5 @@
 -   [Git](git.md)
 -   [Networking](networking.md)
 -   [Command line](command_line.md)
+-   [Tools](tools/README.md)
 -   [Kubernetes - kubectl](kubernetes.md)
