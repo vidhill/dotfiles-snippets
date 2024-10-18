@@ -10,7 +10,7 @@ Moving cursor around
 
 ## Various
 
--   [yq](command-line/yq.md)
+-   [Tools](./tools/README.md)
 
 Make Directory, with subfolders
 

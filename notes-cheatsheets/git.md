@@ -13,7 +13,7 @@ $ git commit --no-verify
 ```
 
 ```sh
-$ git rebase --committer-date-is-author-date --interactive origin/main 
+$ git rebase --committer-date-is-author-date --interactive origin/main
 ```
 
 ### Rename Branch Locally
