@@ -75,3 +75,15 @@ $ find . -path ./node_modules -prune -false -o -name "*.test.js
 ```bash
 $ find . -name "*.spec.js" | xargs grep "describe"
 ```
+
+Find folders, excluding the `.git` and `node_modules` folder
+
+```sh
+$ find . -type d \( -name "node_modules" -o -name ".git" -o \) -prune -o -type d -print
+```
+
+Find files matching pattern `*.md`, excluding the `.git` and `node_modules` folder
+
+```sh
+$ find . -type d \( -name "node_modules" -o -name ".git" \) -prune -o -type f -name "*.md" -print
+```
