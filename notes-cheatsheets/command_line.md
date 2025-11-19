@@ -67,7 +67,11 @@ $ find . -name "*.js"
 Find but exclude `node_modules` folder
 
 ```bash
-$ find . -path ./node_modules -prune -false -o -name "*.test.js
+$ find . -name "node_modules" -prune -o -name "*.spec.ts"
+```
+
+```bash
+$ find . -name "node_modules" -prune -o -name "*.test.js" -print0
 ```
 
 ### Find and grep within files
